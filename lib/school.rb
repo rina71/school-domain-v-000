@@ -3,7 +3,8 @@ class School
 
   def initialize(name)
     @name = name
-    @roster = { }
+    # @roster = { }
+    @roster = Hash.new {|h, k] h[k] = []}
 
   end
 
@@ -12,11 +13,12 @@ class School
   def add_student(student,grade)
     # @roster[grade] = [ ]
 
-    if !@roster.key?(grade)
-      @roster[grade] = [student]
-    else
-      @roster[grade] << student
-    end
+    # if !@roster.key?(grade)
+    #   @roster[grade] = [student]
+    # else
+    #   @roster[grade] << student
+    # end
+    @roster[grade] << student
   end
 
 
